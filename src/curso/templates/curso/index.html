@@ -1,0 +1,19 @@
+{% extends 'curso/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <main style="text-align: center;">
+        <h1>Bienvenidos</h1>
+        <a href="{% url 'curso:curso_list' %}"><button>Mostrar Cursos</button></a>
+        <a href="{% url 'curso:alumno_list' %}"><button>Alumnos</button></a>
+        <a href="{% url 'curso:comision_list' %}"><button>Comisiones</button></a>
+    </main>
+        {% endblock content %}
+    </body>
+</html>

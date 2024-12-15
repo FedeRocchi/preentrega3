@@ -1,0 +1,28 @@
+{% extends 'curso/base.html' %}
+
+{% block content %}
+    
+    <h1>Lista de Cursos</h1>
+    <main style="text-align: center;">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Comision</th>
+                    <th>DNI</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for object in object_list %}
+            </tbody>
+                <tr>
+                    <td>{{object.comision}}</td>
+                    <td>{{object.dni }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'curso:alumno_create' %}"><button>Crear alumno</button></a>
+        <a href="{% url 'curso:index' %}"><button>Volver al Menu</button></a>
+</main>
+{% endblock content %}

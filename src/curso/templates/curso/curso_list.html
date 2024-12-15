@@ -1,0 +1,17 @@
+{% extends 'curso/base.html' %}
+
+{% block content %}
+    
+    <h1>Lista de Cursos</h1>
+    <main style="text-align: center;">
+    <ul>
+        {% for object in object_list %}
+            <p>{{object.nombre}}</p>
+        {% endfor %}
+
+        <a href="{% url 'curso:curso_create' %}"><button>Crear curso</button></a>
+        <a href="{% url 'curso:index' %}"><button>Volver al Menu</button></a>
+    </main>
+    </ul>
+
+{% endblock content %}
